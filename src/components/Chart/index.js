@@ -194,7 +194,9 @@ function Chart() {
       .attr('x', (d, i) => (type === 'team' ? threeCenters[1].x : pos[i + 1].x))
       .attr('y', (d, i) => (type === 'team' ? (i + 1) * 40 : 40))
       .attr('text-anchor', (d, i, arr) => {
-        if (arr.length === 4) {
+        if (type === 'team') {
+          return 'middle'
+        } else if (arr.length === 4) {
           return [0, 1, 2].includes(i) ? 'end' : 'middle'
         } else {
           return i === 0 ? 'end' : i === arr.length - 1 ? 'start' : 'middle'
