@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/d3-nba-salaries/precache-manifest.b2ffe0c35a5847e37981434c9eaf2a88.js"
+  "/d3-nba-salaries/precache-manifest.efe1604f8457fbb39007fecbd9540df5.js"
 );
 
 self.addEventListener('message', (event) => {
