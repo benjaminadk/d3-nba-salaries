@@ -316,67 +316,6 @@ function Chart() {
       </Header>
       <Visualization ref={visualization} />
       <Footer>
-        <p>
-          This visualization provides a quick overview of the salaries of NBA players in the
-          2018-2019 season. The salaries of players range from {formatSalary(minSalary)}{' '}
-          <strong>(Stephen Curry)</strong> to {formatSalary(maxSalary)}{' '}
-          <strong>(Ding Yanyuhang)</strong>. The average NBA player salary is{' '}
-          {formatSalary(averageSalary)}. The minimum yearly salary for a rookie $582,180 but teams
-          will sign 10 day contracts with players when they need to fill a roster spot, accounting
-          for the lower salaries.
-        </p>
-        <p>
-          The bubble chart can be split in various ways to separate groups of players. When looking
-          at All Stars it seems to make sense that many of the players have large salaries. In fact
-          the average salary of an All Star is {formatSalary(averageAllStar)}. With this in mind it
-          becomes evident that players on rookie contracts, such as{' '}
-          <strong>D`Angelo Russell</strong> and <strong>Karl Anthony-Towns</strong>, who are also
-          All Stars, provide a great value for their teams at around $7 million/year. Keep an eye
-          out for All Star <Svg name='star' />, All NBA <Svg name='nba' />, and All Defensive{' '}
-          <Svg name='defense' /> icons in the player tooltips.
-        </p>
-        <p>
-          Value over replacement player (VORP) is an advanced metric that estimates a players
-          contibution to their team vs. a player of minimum salary. VORP takes many offensive and
-          even some defensive statistics into account and more information can be found at{' '}
-          <a
-            href='https://www.basketball-reference.com/about/bpm.html#vorp'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Basketball Reference
-          </a>
-          . <strong>James Harden</strong> had the highest VORP in the 2018-19 season with a score of
-          9.9. By separating players with a VORP above 2 and also above 4 some interesting
-          observations can be made. Players like <strong>Ben Simmons</strong> with a VORP of 4.1 and
-          a salary of $6.4 million/year and <strong>Pascal Siakam</strong>, of the world champion{' '}
-          <strong>Toronto Raptors</strong>, with a VORP of 3.5 and a salary of $1.5 million/year,
-          are producing at high levels for their teams while being paid relatively small salaries.
-          For example, <strong>Siakam's</strong> VORP was only .1 less than Final's MVP{' '}
-          <strong>Kawhi Leonard's</strong> 3.6. Granted, this version of VORP is based on the
-          regular season and the amount of minutes played is figured in. This somewhat diminishes{' '}
-          <strong>Leonard's</strong> VORP since he missed 22 games for load management.
-        </p>
-        <p>
-          VORP scores can also give us an idea of which players may not be living up to their
-          contracts. The highest paid player with a VORP below 2 is <strong>Gordon Hayward</strong>{' '}
-          of the <strong>Boston Celtics</strong>, making a team high $31.2 million/year.{' '}
-          <strong>Hayward</strong> had signed a large contract then suffered a career altering leg
-          fracture in the second game of the 2017-18 season and struggled most of this season unable
-          to play to his previous level.
-        </p>
-        <p>
-          Total Points is an another way to look at the overall contribution of a player. I have
-          broken players into three categories, those who scored an average of 20 points per team
-          game, those who scored an average of 10 points per team game, and everyone else. Note that
-          this inherently takes availablity and consistency into account. For example,{' '}
-          <strong>LeBron James</strong> averaged 27 points per game but missed nearly 30 games due
-          to a groin injury, ending up with a total of 1505 total points. It also becomes apparent
-          how costly injuries can be to a team's bottom line, and in a salary capped league,
-          ultimate success. <strong>Victor Oladipo</strong> is paid $21 million/year but suffered a
-          serious knee injury after playing 36 games he contributed only 675 points to the{' '}
-          <strong>Indiana Pacer's</strong> season.
-        </p>
         <div className='footer'>
           Thanks to{' '}
           <a
@@ -386,11 +325,7 @@ function Chart() {
           >
             this blog post
           </a>{' '}
-          for inspiring this visualization. Check out my blog post explaing this project{' '}
-          <a href='#' target='_blank' rel='noopener noreferrer'>
-            here
-          </a>
-          .
+          for inspiring this visualization.
         </div>
       </Footer>
       <Tooltip ref={tooltip}>
